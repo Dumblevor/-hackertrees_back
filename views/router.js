@@ -1,5 +1,6 @@
 // // ? Applications routes will live in here.
 // // ? Applications routes will live in here.
+
 import express from "express"
 import postController from "../controllers/postController.js"
 import jobController from "../controllers/jobController.js"
