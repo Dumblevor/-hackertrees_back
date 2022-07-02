@@ -12,8 +12,8 @@ import logger from "./middleware/logger.js"
 import mongoSanitize from 'express-mongo-sanitize'
 import errorHandler from "./middleware/errorHandler.js"
 
-import morgan from "morgan" //for logging purposes
-import fs from 'fs'
+// import morgan from "morgan" //for logging purposes
+// import fs from 'fs'
 
 // const dir = process.cwd() + '/logs/access.log'
 
