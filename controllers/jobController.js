@@ -77,12 +77,11 @@ async function likeJob(req, res) {
 
   console.log(job);
 
+  //checks if there is a match in the userliked array
   const isThereMatch = job.userLiked.filter((username) => {
-    console.log(`username ${username}`);
-    console.log(`currUser ${currUser}`);
     return currUser === username
   });
-
+  //if user hasn't liked the job....
   if (isThereMatch.length === 0) {
     const updateJobComment = await Job.findOneAndUpdate({ '_id': jobId }, { 'likes': req.body.likes } , { new: true })
     console.log(updateJobComment);
