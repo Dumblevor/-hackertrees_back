@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "npx nodemon server.js",
-    "seed": "node db/seedPosts.js; node db/seedJobs.js;"
+    "seed": "node db/seedPosts.js; node db/seedJobs.js; node db/seedUsers.js"
   },
   "author": "",
   "license": "ISC",
