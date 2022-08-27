@@ -4,10 +4,39 @@ import { secret } from '../config/environment.js'
 import axios from 'axios'
 
 
+// async function register(req, res, next) {
+//   const body = req.body
+//   console.log(body.password);
+//   try {
+//     if (body.password !== body.passwordConfirmation) {
+//       return res.status(422).json({
+//         message: "Passwords do not match",
+//         errors: {
+//           passwordConfirmation: "Passwords do not match",
+//         },
+//       })
+//     }
+//     const newUser = await User.create(body)
+//     res.status(201).json({ message: "Login ok" })
+
+//   } catch (err) {
+//     next(err)
+//   }
+// }
+
 async function register(req, res, next) {
   const body = req.body
-  console.log(body.password);
+  console.log(body);
+  const user = await User.findOne({ email: req.body.email })
   try {
+    if (user) {
+      return res.status(409).json({
+        message: "User Already Exists",
+        errors: {
+          email: "User Already Exists",
+        },
+      })
+    }
     if (body.password !== body.passwordConfirmation) {
       return res.status(422).json({
         message: "Passwords do not match",
@@ -17,13 +46,11 @@ async function register(req, res, next) {
       })
     }
     const newUser = await User.create(body)
-    res.status(201).json({ message: "Login ok" })
-
+    res.status(201).json({ message: "Login OK" })
   } catch (err) {
     next(err)
   }
 }
-
 
 async function login(req, res, next) {
   console.log("hello");
@@ -45,7 +72,7 @@ async function login(req, res, next) {
         token,
         user,
       })
-    } 
+    }
   } catch (err) {
     next(err)
   }
