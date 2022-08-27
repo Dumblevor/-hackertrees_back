@@ -4,7 +4,7 @@ import { secret } from '../config/environment.js'
 import axios from 'axios'
 
 
-
+//new func
 async function register(req, res, next) {
   const body = req.body
   console.log(body);
