@@ -6,6 +6,7 @@ import axios from 'axios'
 
 async function register(req, res, next) {
   const body = req.body
+  
   console.log(body);
 
   const user = await User.findOne({ email: req.body.email })
@@ -27,7 +28,7 @@ async function register(req, res, next) {
         },
       })
     }
-    
+
     const newUser = await User.create(body)
 
     res.status(201).json({ message: "Login ok" })

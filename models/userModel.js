@@ -1,6 +1,5 @@
 import mongoose from 'mongoose'
 import mongooseHidden from 'mongoose-hidden'
-// import uniqueValidator from 'mongoose-unique-validator'
 import validator from 'validator'
 import bcrypt from 'bcrypt'
 
@@ -53,7 +52,6 @@ userSchema.pre('save', function hashPassword(next) {
 })
 
 userSchema.methods.validatePassword = function validatePassword(password) {
-  console.log(password, this.password);
   return bcrypt.compareSync(password, this.password)
 }
 
