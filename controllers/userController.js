@@ -4,25 +4,6 @@ import { secret } from '../config/environment.js'
 import axios from 'axios'
 
 
-// async function register(req, res, next) {
-//   const body = req.body
-//   console.log(body.password);
-//   try {
-//     if (body.password !== body.passwordConfirmation) {
-//       return res.status(422).json({
-//         message: "Passwords do not match",
-//         errors: {
-//           passwordConfirmation: "Passwords do not match",
-//         },
-//       })
-//     }
-//     const newUser = await User.create(body)
-//     res.status(201).json({ message: "Login ok" })
-
-//   } catch (err) {
-//     next(err)
-//   }
-// }
 
 async function register(req, res, next) {
   const body = req.body
