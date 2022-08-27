@@ -8,8 +8,7 @@ import { disconnectDB, connectToDB } from './helpers.js'
 import userData from './data/userData.js'
 
 async function seedPosts() {
-  // ? Always starts with mongodb://mongodb://127.0.0.1:27017/
-  // ? Then you give it the name of the db to connect to (you make this up.)
+
   await connectToDB()
 
   await mongoose.connection.db.dropDatabase()
