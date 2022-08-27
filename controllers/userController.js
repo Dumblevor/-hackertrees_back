@@ -4,11 +4,12 @@ import { secret } from '../config/environment.js'
 import axios from 'axios'
 
 
-//new func
 async function register(req, res, next) {
   const body = req.body
   console.log(body);
+
   const user = await User.findOne({ email: req.body.email })
+
   try {
     if (user) {
       return res.status(409).json({
@@ -26,12 +27,16 @@ async function register(req, res, next) {
         },
       })
     }
+    
     const newUser = await User.create(body)
-    res.status(201).json({ message: "Login OK" })
+
+    res.status(201).json({ message: "Login ok" })
+
   } catch (err) {
     next(err)
   }
 }
+
 
 async function login(req, res, next) {
   console.log("hello");
@@ -53,7 +58,7 @@ async function login(req, res, next) {
         token,
         user,
       })
-    }
+    } 
   } catch (err) {
     next(err)
   }
