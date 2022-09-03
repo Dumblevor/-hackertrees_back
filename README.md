@@ -71,7 +71,7 @@ My tickets are marked orange.
 #### Roadmap
 ![sprint-2-roadmap](./readme-assets/Spint-2-roadmap.png)
 
-
+In total I completed 12 of 28 issues ~ 43% + initial teachnical, Git and Jira setups.
 
 ## Bugs, Wins & Learnings
 Many features that were stretch goals were not finished, including search for the whole site, filtering by tags, upvotes for posts.
@@ -80,6 +80,10 @@ It was a great project and there is a throve of features that can be added to ma
 Working in team is fun and can get a lot done when the group is in sync. 
 I personally learned quite a bit about react, router, state and bulma on this project. 
 
-## Assets & credits
-- Logo: Dimitar Vidolov (canva.com).
+Final version of the newsfeed:
+![newsfeed](./readme-assets/final-social.png)
+
+
+## Credits
+- Logo: Dimitar Vidolov (via canva.com).
 --------
