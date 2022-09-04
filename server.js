@@ -1,11 +1,6 @@
-// ? Our server file is responsible for setting up and running our express server,
-// ? with all the configuration that it needs to work.
-// ? Our server file is responsible for setting up and running our express server,
-// ? with all the configuration that it needs to work.
-
 import express from "express";
 import router from "./views/router.js"
-import cors from 'cors' //* <-- This is new
+import cors from 'cors' 
 import { port } from './config/environment.js'
 import { connectToDB } from "./db/helpers.js"
 import logger from "./middleware/logger.js"
@@ -14,7 +9,6 @@ import errorHandler from "./middleware/errorHandler.js"
 
 // import morgan from "morgan" //for logging purposes
 // import fs from 'fs'
-
 // const dir = process.cwd() + '/logs/access.log'
 
 const app = express()
@@ -22,7 +16,7 @@ const app = express()
 
 app.use(express.json())
 
-app.use(cors()) //* <-- This is new
+app.use(cors())
 
 app.use(mongoSanitize());
 

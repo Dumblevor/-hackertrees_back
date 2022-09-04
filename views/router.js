@@ -1,5 +1,3 @@
-// // ? Applications routes will live in here.
-// // ? Applications routes will live in here.
 
 import express from "express"
 import postController from "../controllers/postController.js"
@@ -13,7 +11,6 @@ const router = express.Router()
 router.route("/posts/")
   .get(secureRoute, postController.getPosts)
   .post(secureRoute, postController.createPost)
-// (authenticate, //createPost
 
 router.route("/posts/:postID")
   .get(secureRoute, postController.getPostByID)
@@ -72,7 +69,6 @@ router.route("/profile/:userID")
   .delete(secureRoute, userController.removeUserData)
   .put(secureRoute, userController.updateUserData)
 
-// router.route("/posts/:postID/comment")
-//   .post(authenticate, commentController.createComment)
+
 
 export default router

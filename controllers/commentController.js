@@ -1,4 +1,3 @@
-// ! Controller just for comments.
 import PostModel from '../models/postModel.js'
 import JobModel from '../models/jobModel.js'
 

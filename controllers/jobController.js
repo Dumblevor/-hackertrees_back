@@ -1,4 +1,3 @@
- 
 
 import Job from "../models/jobModel.js"
 

@@ -80,6 +80,28 @@ It was a great project and there is a throve of features that can be added to ma
 Working in team is fun and can get a lot done when the group is in sync. 
 I personally learned quite a bit about react, router, state and bulma on this project. 
 
+A good idea was to keep updating the front end with a time interval:
+```
+  const getPostData = async () => {
+    const { data } = await axios.get(`${baseUrl}/posts/`,
+      {
+        headers: { "authorization": `Bearer ${localStorage.getItem("token")}` },
+      })
+    setAllUserPosts(data)
+  }
+
+  useEffect(() => {
+    getPostData()
+    setInterval(() => {
+      getPostData()
+    }, 2000);
+  }, [])
+  ```
+
+  That way the user will see up-to-date data. 
+  Deleting comments and posts in real time using state also improves drastically the UX. 
+  I aslo added a show/hide button for the comments so the feed doesn't clutter. 
+
 Final version of the newsfeed:
 ![newsfeed](./readme-assets/final-social.png)
 

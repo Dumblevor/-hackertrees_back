@@ -1,4 +1,3 @@
-// ? A file that will be used to 'seed' our database with initial data.
 
 import mongoose from 'mongoose'
 import PostModel from '../models/postModel.js'

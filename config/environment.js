@@ -1,4 +1,4 @@
-//deployment
+// deployment
 import dotenv from 'dotenv'
 dotenv.config()
 
@@ -8,7 +8,7 @@ export const secret = process.env.SECRET || 'growTreesNoChopChopGottaSustain'
 
 
 
-//old ver
+// //old ver
 
 // const environment = process.env.NODE_ENV
 
