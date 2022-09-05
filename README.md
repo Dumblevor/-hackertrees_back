@@ -5,7 +5,7 @@
 This is the third project of the software engineering immersive course at General Assembly London. The assignment was to create a full-stack website with React and Node.js. The project was to be completed **in a group** within **6 days** over 2 weeks. 
 
 Preview: ![preview-screen](./readme-assets/preview-screen.png)
-(navbar is shown for preview purposes, it us unavailable unless signed-in)
+(navbar is shown for preview purposes, it's unavailable unless signed in)
 
 
 ## Technologies used 
@@ -24,16 +24,16 @@ Preview: ![preview-screen](./readme-assets/preview-screen.png)
 ## Approach
 
 The idea from the beginning was to create a specialised professional network site for IT professionals. 
-Me and my team wrote up user stories and wireframes using Miro:
+My team and I wrote up user stories and wireframes using Miro:
 ![miro-screen](./readme-assets/miro-screen.png)
 
-I took the lead on the social aspect of the site, including filtering, show/hide comments, tags, CRUD posts and comments, both on the fronend and backend. I also contributed to the home page, the middleware on the backend, the footer, about us page, login, register and logout. 
+I took the lead on the social aspect of the site, including filtering, showing and hiding comments, tags, CRUD posts and comments, both on the frontend and backend. I also contributed to the home page, the middleware on the backend, the footer, an about us page, a login, register and logout. 
 
 
 ## Timeline
 - Day 1 - Brainstorming & wireframes, user stories, pseudo models
-- Day 2 - Boiler plate setup, Git setup, Jira, start of Sprint 1
-- Day 4 - End of sprint 1, start of sprint 2
+- Day 2 - Boilerplate setup, Git setup, Jira, the start of Sprint 1
+- Day 4 - End of sprint 1, the start of Sprint 2
 - Day 6 - End of sprint 2
 - Day 7 - Deployment
 
@@ -71,14 +71,14 @@ My tickets are marked orange.
 #### Roadmap
 ![sprint-2-roadmap](./readme-assets/Spint-2-roadmap.png)
 
-In total I completed 12 of 28 issues ~ 43% + initial teachnical, Git and Jira setups.
+In total, I completed 12 of 28 issues ~ 43% + initial technical installations, Git and Jira setups.
 
 ## Bugs, Wins & Learnings
-Many features that were stretch goals were not finished, including search for the whole site, filtering by tags, upvotes for posts.
-It was a great project and there is a throve of features that can be added to make it a proper product. 
+Many features that were stretch goals were not finished, including a search for the whole site.
+It was a great project and there are a throve of features that can be added to make it a proper product. 
 
-Working in team is fun and can get a lot done when the group is in sync. 
-I personally learned quite a bit about react, router, state and bulma on this project. 
+Working in a team is fun and can get a lot done when the group is in sync. 
+I learned quite a bit about react, router, state and Bulma on this project. 
 
 A good idea was to keep updating the front end with a time interval:
 ```
@@ -99,10 +99,10 @@ A good idea was to keep updating the front end with a time interval:
   ```
 
   That way the user will see up-to-date data. 
-  Deleting comments and posts in real time using state also improves drastically the UX. 
-  I aslo added a show/hide button for the comments so the feed doesn't clutter. 
+  Deleting comments and posts in  real-time using state also improves drastically the UX. 
+  I also added a show/hide button for the comments so the feed doesn't clutter. 
 
-Final version of the newsfeed:
+The final version of the newsfeed:
 ![newsfeed](./readme-assets/final-social.png)
 
 
