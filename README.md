@@ -23,19 +23,11 @@ Preview: ![preview-screen](./readme-assets/preview-screen.png)
 
 ## Approach
 
-<<<<<<< HEAD
 The idea from the beginning was to create a specialised network site for IT professionals. 
-Me and my team wrote up user stories and wireframes using Miro:
-![miro-screen](./readme-assets/miro-screen.png)
-
-I took the lead on the social aspect of the site, including filtering, show/hide comments, tags, CRUD posts and comments, both on the frontend and backend. I also contributed to the home page, the middleware on the backend, the footer, about us page, login, register and logout. 
-=======
-The idea from the beginning was to create a specialised professional network site for IT professionals. 
 My team and I wrote up user stories and wireframes using Miro:
 ![miro-screen](./readme-assets/miro-screen.png)
 
 I took the lead on the social aspect of the site, including filtering, showing and hiding comments, tags, CRUD posts and comments, both on the frontend and backend. I also contributed to the home page, the middleware on the backend, the footer, an about us page, a login, register and logout. 
->>>>>>> 90ddc1d7785e026e13dc59d67f97547b01ecf8d4
 
 
 ## Timeline
