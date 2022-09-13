@@ -73,34 +73,67 @@ My tickets are marked orange.
 
 In total I completed 12 of 28 issues ~ 43% + initial teachnical, Git and Jira setups.
 
-## Bugs, Wins & Learnings
-Many features that were stretch goals were not finished, including search for the whole site, filtering by tags, upvotes for posts.
-It was a great project and there is a throve of features that can be added to make it a proper product. 
 
-Working in team is fun and can get a lot done when the group is in sync. 
-I personally learned quite a bit about react, router, state and bulma on this project. 
+## Wins
+It was great to get posts and comments to appear and disappear immediately on button click. Post delete function updates on the backend and gets fresh data. Deleting the comment updates the backend and gets fresh posts data by pulling the function down from the newsfeed component as well.
+All the posts also update with a time interval:
 
-A good idea was to keep updating the front end with a time interval:
 ```
-  const getPostData = async () => {
-    const { data } = await axios.get(`${baseUrl}/posts/`,
-      {
-        headers: { "authorization": `Bearer ${localStorage.getItem("token")}` },
-      })
-    setAllUserPosts(data)
-  }
-
-  useEffect(() => {
+ useEffect(() => {
     getPostData()
     setInterval(() => {
       getPostData()
     }, 2000);
   }, [])
-  ```
+```
 
-  That way the user will see up-to-date data. 
-  Deleting comments and posts in real time using state also improves drastically the UX. 
-  I aslo added a show/hide button for the comments so the feed doesn't clutter. 
+That way the user will see up-to-date data. 
+Deleting comments and posts in real time using state really improves the UX. 
+
+Search actually filters posts by post content similar to Hacker News. The idea was to filter by tags too, but ran out of time. 
+
+I also added a show/hide button for the comments so the feed doesn't clutter with too many comments, used lodash and state to keep track which button is being clicked exactly:
+```
+ function handleShowCommentsButton(postID) {
+    hiddenCommentsNumber.includes(postID)
+      ? setHiddenCommentsNumber(_.remove(hiddenCommentsNumber, (postCheck) => postCheck._id !== postID._id))
+      : setHiddenCommentsNumber([...hiddenCommentsNumber, postID])
+  }
+```
+
+For the upvotes I had to make the model to keep an array of user IDs that liked it, check before allowing a new like to be recorded if the ID is not in the array else it doesn’t execute: 
+
+```
+sync function likePost(req, res) {
+  try {
+    const postID = req.params.postID
+    const user = req.currentUser
+
+    const post = await PostModel.findById(postID)
+    if (!post) return res.json({ message: "This post cannot be found" })
+
+    if (post.upvotedBy.includes(user._id) === false) {
+      post.upvotedBy.push(user)
+      const savedPostWithNewLike = await post.save()
+      res.status(202).json(savedPostWithNewLike.upvotedBy)
+
+    } else {
+      return res.status(403).json({ message: "already liked" })
+    }
+  } catch (e) {
+    console.log(e);
+  }
+}
+```
+
+## Future improvements & Learnings
+Many features that were stretch goals were not finished, including search for the whole site, filtering by tags and notifications with web sockets for example.
+It was a great project and there is a trove of features that can be added to make it a proper product, from enhanced posts & comments to accommodate different content, tagging users and everything else we are used to having in a social network.
+
+Working as a team was good fun and can get a lot done when the group is in sync. 
+I personally learned quite a bit about react, router, state and bulma on this project. 
+
+The implemented features really expanded on my previous knowledge to work with state.
 
 Final version of the newsfeed:
 ![newsfeed](./readme-assets/final-social.png)

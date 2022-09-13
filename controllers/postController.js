@@ -90,7 +90,6 @@ async function likePost(req, res) {
     const post = await PostModel.findById(postID)
     if (!post) return res.json({ message: "This post cannot be found" })
 
-
     if (post.upvotedBy.includes(user._id) === false) {
       post.upvotedBy.push(user)
       const savedPostWithNewLike = await post.save()
@@ -99,7 +98,6 @@ async function likePost(req, res) {
     } else {
       return res.status(403).json({ message: "already liked" })
     }
-
   } catch (e) {
     console.log(e);
   }
