@@ -29,9 +29,11 @@ My team and I wrote up user stories and wireframes using Miro:
 
 I took the lead on the social aspect of the site, including filtering, showing and hiding comments, tags, CRUD posts and comments, both on the frontend and backend. I also contributed to the home page, the middleware on the backend, the footer, an about us page, a login, register and logout. 
 
+We did almost no pseudo code unfortunately as we were quite pressed for time and wanted to get project signed off quicker.
+Our main focus were the user stories and the data models.
 
-## Timeline
-- Day 1 - Brainstorming & wireframes, user stories, pseudo models
+## Timeline Overview
+- Day 1 - Brainstorming, wireframes and user stories
 - Day 2 - Boilerplate setup, Git setup, Jira, the start of Sprint 1
 - Day 4 - End of sprint 1, the start of Sprint 2
 - Day 6 - End of sprint 2
@@ -39,20 +41,28 @@ I took the lead on the social aspect of the site, including filtering, showing a
 
 
 ## Jira setup 
-
-My tickets are marked orange.
+I setup our Jira account and it was off to the races.
+My tickets are marked with an orange circle on the righ hand side. 
+We prioritised by basic functionality first, and the more advanced features by whether we can build them and how long it would take us. 
 
 ### Sprint 1:
 #### MVP Roadmap
+Straghtforward startup, basic CRUD for elements.
+
 ![initial-bakcklog](./readme-assets/MVP-roadmap.png)
 
 #### Initial Backlog
 ![initial-bakcklog](./readme-assets/initial-backlog.png)
 
 #### Backlog
+I also added a blocked by person and blocked by lack understanding, as well cancelled columns for more transperancy and practicallity.
+
+It was also at this point that we realized that the User should've been done first as it started blocking the development of other tickets. 
+
 ![sprint-1-backlog](./readme-assets/Sprint-1-board.png)
 
 #### Stretchgoals
+Once we had CRUD, seeding and basic pages it was time for some more advanced features: 
 ![sprint-1-stretchgoals](./readme-assets/Stretchgoals-1.png)
 
 #### MVP done
@@ -69,6 +79,11 @@ My tickets are marked orange.
 ![sprint-2-bakcklog](./readme-assets/Spint-2-backlog.png)
 
 #### Roadmap
+There were some ambitious tickets in there for a few reasons:
+1. We got excited we can build them, maybe. 
+2. It gave us a perspective of how much more we could do.
+3. And it was motivating us to get done more now.
+
 ![sprint-2-roadmap](./readme-assets/Spint-2-roadmap.png)
 
 In total I completed 12 of 28 issues ~ 43% + initial teachnical, Git and Jira setups.
@@ -131,9 +146,8 @@ Many features that were stretch goals were not finished, including search for th
 It was a great project and there is a trove of features that can be added to make it a proper product, from enhanced posts & comments to accommodate different content, tagging users and everything else we are used to having in a social network.
 
 Working as a team was good fun and can get a lot done when the group is in sync. 
-I personally learned quite a bit about react, router, state and bulma on this project. 
-
-The implemented features really expanded on my previous knowledge to work with state.
+I personally learned quite a bit about react, router, state and bulma on this project, building up on our previous react site. 
+There is quite a bit that goes into a site like this one, though the basics are to get or send data to and from the backend. 
 
 The final version of the newsfeed:
 ![newsfeed](./readme-assets/final-social.png)
